@@ -1,35 +1,28 @@
-import Skip from "./Skip";
+const URL =
+  "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft";
 
 export default async function ScipContainer() {
-  const res = await fetch(
-    "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft"
-  );
+  const res = await fetch(URL, {
+    next: { revalidate: 60 }, // Revalidate every 60 seconds
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
   const data = await res.json();
   console.log(data);
-
+  if (!data || data.length === 0) {
+    return <div>No data available</div>;
+  }
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <p className="text-lg">This is a container for Scip related content.</p>
-      {data.map(
-        (skip: {
-          id: string;
-          name: string;
-          description: string;
-          price: number;
-          imageUrl: string;
-          location: string;
-        }) => (
-          <Skip
-            key={skip.id}
-            id={skip.id ? skip.id : "unknown-id"}
-            name={skip.name}
-            description={skip.description}
-            price={skip.price}
-            imageUrl={skip.imageUrl}
-            location={skip.location}
-          />
-        )
-      )}
+    <div>
+      <h1>ScipContainer</h1>
+      <p>This is a placeholder for the ScipContainer component.</p>
+      <p>
+        It will be used to display information related to SCIP (Scalable
+        Collaborative Information Processing).
+      </p>
+      <p>More details will be added soon.</p>
     </div>
   );
 }
