@@ -1,3 +1,6 @@
+import Skip from "./Skip";
+import { SkipProps } from "./tools/SkipProps";
+
 const URL =
   "https://app.wewantwaste.co.uk/api/skips/by-location?postcode=NR32&area=Lowestoft";
 
@@ -8,7 +11,7 @@ export default async function ScipContainer() {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-  const data = await res.json();
+  const data: SkipProps[] = await res.json();
 
   console.log(data);
   if (!data || data.length === 0) {
@@ -22,6 +25,9 @@ export default async function ScipContainer() {
         It will be used to display information related to SCIP (Scalable
         Collaborative Information Processing).
       </p>
+      {data.map((skip) => (
+        <Skip key={skip.id} {...skip} />
+      ))}
       <p>More details will be added soon.</p>
     </div>
   );
