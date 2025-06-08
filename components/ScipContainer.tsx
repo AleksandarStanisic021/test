@@ -8,8 +8,8 @@ export default async function ScipContainer() {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-
   const data = await res.json();
+
   console.log(data);
   if (!data || data.length === 0) {
     return <div>No data available</div>;
