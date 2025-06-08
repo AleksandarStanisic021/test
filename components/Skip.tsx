@@ -1,6 +1,6 @@
 import { SkipProps } from "./tools/SkipProps";
 
-export default function Skip(props: SkipProps) {
+export default async function Skip(props: SkipProps) {
   return (
     <div>
       <h2>{props.id}</h2>
