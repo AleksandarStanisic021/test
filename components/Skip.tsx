@@ -1,6 +1,7 @@
 import { SkipProps } from "./tools/SkipProps";
 import { Badge } from "@/components/ui/badge";
 import ButtonComponent from "./ButtonComponent";
+import Link from "next/link";
 
 import {
   Card,
@@ -58,7 +59,9 @@ export default async function Skip(props: SkipProps) {
           </div>
         </CardContent>
         <CardFooter>
-          <ButtonComponent />
+          <Link href={`/hire/${props.id}`}>
+            <ButtonComponent />
+          </Link>
         </CardFooter>
       </Card>
     </div>
