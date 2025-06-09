@@ -18,13 +18,10 @@ export default async function ScipContainer() {
     return <div>No data available</div>;
   }
   return (
-    <div>
-      <h1>ScipContainer</h1>
-
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       {data.map((skip) => (
         <Skip key={skip.id} {...skip} />
       ))}
-      <p>More details will be added soon.</p>
     </div>
   );
 }

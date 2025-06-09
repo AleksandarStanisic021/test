@@ -59,7 +59,7 @@ export default async function Skip(props: SkipProps) {
         </CardContent>
         <CardFooter>
           <Button style={{ backgroundColor: "blue", color: "white" }}>
-            Book Now
+            Select to skip
           </Button>
         </CardFooter>
       </Card>
