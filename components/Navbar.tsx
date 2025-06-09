@@ -38,10 +38,9 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <ul
-          style={{ display: "flex", flexWrap: "nowrap", gap: "6px" }}
           className={clsx(
-            "md:flex gap-6 absolute md:relative bg-gray-800 md:bg-transparent top-16 left-0 w-full md:w-auto p-4 md:p-0 md:flex-row flex-col transition-all duration-300",
-            open ? "block" : "hidden md:block"
+            "md:flex gap-6 absolute md:relative bg-gray-800 md:bg-transparent w-full md:w-auto p-4 md:p-0 md:flex-row",
+            open ? "block" : "hidden" // Ensure toggle behavior works
           )}>
           <li>
             <Link
