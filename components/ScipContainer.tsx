@@ -20,11 +20,7 @@ export default async function ScipContainer() {
   return (
     <div>
       <h1>ScipContainer</h1>
-      <p>This is a placeholder for the ScipContainer component.</p>
-      <p>
-        It will be used to display information related to SCIP (Scalable
-        Collaborative Information Processing).
-      </p>
+
       {data.map((skip) => (
         <Skip key={skip.id} {...skip} />
       ))}
