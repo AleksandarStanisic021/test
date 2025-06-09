@@ -119,6 +119,6 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     color-scheme: dark;
-    background-color: slategray;
+    background-color: rgb(20, 21, 23);
   }
 }

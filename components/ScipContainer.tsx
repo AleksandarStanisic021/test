@@ -20,14 +20,14 @@ export default async function ScipContainer() {
   }
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <h1 className="col-span-full text-center text-red-700 text-2xl font-bold mb-4">
+      <h1 className="col-span-full text-center text-orange-500 text-2xl font-bold mb-4">
         Skips Available in Lowestoft
       </h1>
       {data.map((skip) => (
         <Skip key={skip.id} {...skip} />
       ))}
       <div className="col-span-full text-center mt-4 m-4 space-x-3">
-        <Button className="bg-red-700 text-white" asChild>
+        <Button className="bg-orange-500 text-white" asChild>
           <a
             href="https://app.wewantwaste.co.uk/skips"
             target="_blank"
@@ -35,7 +35,7 @@ export default async function ScipContainer() {
             Prev
           </a>
         </Button>
-        <Button className="bg-red-700 text-white" asChild>
+        <Button className="bg-orange-500 text-white" asChild>
           <a
             href="https://app.wewantwaste.co.uk/skips"
             target="_blank"

@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link
           href="/"
           className="text-orange-500 text-xl font-bold flex items-center gap-2">
-          <Home className="w-6 h-6 text-orange-500" /> My Website
+          <Home className="w-6 h-6 text-orange-500" /> My Skip Hire
         </Link>
 
         {/* Mobile Menu Toggle */}
