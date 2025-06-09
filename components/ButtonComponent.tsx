@@ -5,12 +5,16 @@ import { Button } from "@/components/ui/button";
 
 export default function ButtonComponent() {
   const [text, setText] = useState("Select to skip");
+  const [bgColor, setBgColor] = useState("blue");
 
   return (
     <div>
       <Button
-        style={{ backgroundColor: "blue", color: "white" }}
-        onClick={() => setText("Skip selected")}>
+        style={{ backgroundColor: bgColor, color: "white" }}
+        onClick={() => {
+          setText("Skip selected");
+          setBgColor("red");
+        }}>
         {text}
       </Button>
     </div>
