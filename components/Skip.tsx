@@ -1,6 +1,6 @@
 import { SkipProps } from "./tools/SkipProps";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "./ui/button";
+import ButtonComponent from "./ButtonComponent";
 
 import {
   Card,
@@ -58,9 +58,7 @@ export default async function Skip(props: SkipProps) {
           </div>
         </CardContent>
         <CardFooter>
-          <Button style={{ backgroundColor: "blue", color: "white" }}>
-            Select to skip
-          </Button>
+          <ButtonComponent />
         </CardFooter>
       </Card>
     </div>
